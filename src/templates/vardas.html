@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1> cia yra  {{ vardas.vardas }}</h1>
+<a class="btn btn-primary" href="{{ url_for('delete_man', id=vardas.id)}}" role="button">delete</a>
+<a class="btn btn-secondary" href="{{ url_for('update_name', id=vardas.id)}}" role="button">update</a>
+
+{% endblock %}

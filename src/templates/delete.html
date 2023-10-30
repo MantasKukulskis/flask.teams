@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1> ar tikrai istrinti {{ vardas.vardas }} {{ vardas.id }} ?</h1>
+<form method="post" action="{{ url_for('delete_man', id=vardas.id) }}">
+  <button type="submit" class="btn btn-primary">Istrinti</button>
+</form>
+{% endblock %}

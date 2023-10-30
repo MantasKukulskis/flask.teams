@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1> ar tikrai norite pakeisti {{ vardas.vardas }} {{ vardas.id }} ?</h1>
+ <form method="post" action="{{ url_for('update_name', id=vardas.id) }}">
+      {{ form.hidden_tag() }}
+      <div class="form-group">
+      {{ form.vardas.label(class="form-control-label") }}
+      {{ form.vardas(class="form-control") }}
+      </div>
+
+      {{ form.submit }}
+  </form>
+{% endblock %}
